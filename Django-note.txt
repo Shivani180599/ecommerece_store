@@ -1,0 +1,69 @@
+Django 
+***********************
+
+Create enviornment 
+py -m venv venv
+
+activate enviornment 
+venv\Scripts\activate
+
+pip install Django
+
+After installing startproject 
+
+>django-admin startproject core .
+py manage.py startapp store
+
+inside store there we need to create model 
+
+inside model.py we create model category  of the website(refer model.py file)
+
+inside core settings.py 'store' (add store refere core settings.py file )
+
+then run these two cmd
+
+py manage.py makemigrations
+py manage.py migrate
+
+(this will migrate both two class of model.py category and product and will create 0001_initial.py)
+
+Now add media folder in the venv
+and add urls (refer urls.py pf core)
+also add those refernce of urls inside core settings
+(this will help to add urls of the media)
+
+
+Now can create admin of the our django website
+
+for that inside store admin.py have to add both models(refer admin.py file)
+
+Now we can run server 
+cmd id :-
+py manage.py runserver
+
+by running tis we have to give username and password for accessing as an admin 
+
+once its accessable we can add category of the store and the product
+*************************************************
+Now the next step is two add template to so user can access
+
+create urls.py inside store (refer urls.py)
+now that urls need to add with the veiw of the store(check view.py)
+also in core urls.py include store.urls(refer urls.py)
+
+create template folder inside that add store and inside it create home.html page
+
+that tamplate need to be added in the core settings.py
+also store/home.html path need to be added inside store view.py
+
+now if we runserver will be able to see home page
+
+*************************************************
+
+Header and footer is element in the page
+
+
+
+
+
+
